@@ -37,11 +37,11 @@ while(j>=0 & j<6/pi^2*log(X*Y)){
 
 z=xi
 
-for(l in 1:17){
+for(l in 1:7){
 xi=floor(as.numeric(-(xi)*z)%%composed)
 }
 error=1
-for(l in 1:17){
+for(l in 1:7){
 error=floor(as.numeric(-(y+17*xi)*error)%%composed)
 }
 
