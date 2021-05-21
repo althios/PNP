@@ -4,7 +4,7 @@ h=2.7
 n=5
 m=10
 k=m*n/2
-#probabilidad de elejir dos nodos conectados en la primera capa
+#probabilidad de elegir dos nodos conectados en la primera capa
 prob_1=0.87
 prob_2=0.75
 #nodos
