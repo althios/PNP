@@ -22,3 +22,20 @@ lines(c(M[M2],M[M1]),c(N[M2],N[M1]),type='l',lty=3,lwd=1,col="grey")
 lines(c(M[M2[A1:(A2-1)]],M[M1[(A1+1):A2]]),c(N[M2[A1:(A2-1)]],N[M1[(A1+1):A2]]),col="dark blue")
 #total de aristas
 legend(0,0.95,title=c("Aristas"),legend=c(A2-A1))
+#guardamos varios pares de nodos elegidos uniformemente
+set.seed(21459)
+Sides_per_Try=rep(0,500)
+for(i in 1:500){
+M3=sample(M1)
+A3=which(M3==sample(M3,1,runif(1)))[1]
+M4=sample(M2)
+A4=which(M4==sample(M4,1,runif(1)))[1]  
+#guardamos el numero de aristas que conecta cada par de nodos
+Sides_per_Try[i]=abs(A4-A3)
+}
+plot(Sides_per_Try/50)
+p=mean(Sides_per_Try/50)
+s=sd(Sides_per_Try/50)
+abline(p+3*s,0)
+abline(p,0)
+abline(p-3*s,0)
