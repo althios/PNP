@@ -11,7 +11,6 @@ for (j in 1:50){
   }
   times1[j]=((proc.time()[1]-times1[j]))/1000
 }
-times1[1:10]
 hist(times1)
 times2=rep(0,50)
 for (j in 1:50){
